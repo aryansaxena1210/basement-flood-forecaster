@@ -1,0 +1,24 @@
+# Basement Flood Forecaster
+
+Predicts storm-driven basement flooding demand 24-48 hours ahead from rain forecasts (Chicago 311 + NOAA).
+
+## Setup
+```
+python -m venv .venv
+.venv\Scripts\activate        # Windows
+pip install -r requirements.txt
+```
+
+## Layout
+- `data/sample/` synthetic data in the final format (committed). `data/raw`, `data/processed` are git-ignored.
+- `src/data`, `src/features`, `src/models` pipeline code
+- `api/` FastAPI backend, `dashboard/` front end, `reports/` write-up
+- `docs/` data contract, API contract, task board
+
+## Workflow
+- Read `docs/TASKS.md` for your row.
+- One branch per person (`p1-weather`, `p2-311`, ...). Open a PR into `main`.
+- Raw/processed data is not committed; scripts in `src/data` must be able to regenerate it. Ofcourse, these mock-data-generation scripts are not added yet, the person working on the data layer should do this on priority to unblock others
+
+## Data sources
+Where the training and forecast data comes from, with working example calls: `docs/data_sources.md`.
