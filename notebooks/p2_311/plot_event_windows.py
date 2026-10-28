@@ -73,8 +73,8 @@ for a, w in zip(axes.flat, WINDOWS):
           ylabel=f"total complaints, next {w} day{'s' if w > 1 else ''}",
           title=f"Next {w} day{'s' if w > 1 else ''} (rank correlation {rho:.2f})")
     print(f"next {w} days: rank correlation with max rain = {rho:.2f}")
-axes[0, 0].scatter([], [], color="tab:red", label=f"big event (peak {BIG_PEAK}+)")
-axes[0, 0].scatter([], [], color="tab:blue", label="smaller event")
+axes[0, 0].scatter([], [], color="tab:red", label=f"big event: busiest single day had {BIG_PEAK}+ complaints")
+axes[0, 0].scatter([], [], color="tab:blue", label=f"smaller event: busiest day under {BIG_PEAK}")
 axes[0, 0].legend()
 plt.tight_layout()
 os.makedirs("notebooks/p2_311/figures", exist_ok=True)
