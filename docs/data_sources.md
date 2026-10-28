@@ -35,7 +35,7 @@ curl.exe -G "https://data.cityofchicago.org/resource/v6vf-nfxy.json" `
   --data-urlencode "`$select=date_trunc_ymd(created_date) as day, count(*) as n" `
   --data-urlencode "`$where=sr_type='Water in Basement Complaint' AND created_date>='2018-01-01T00:00:00' AND duplicate=false" `
   --data-urlencode "`$group=day" --data-urlencode "`$order=day" --data-urlencode "`$limit=5000" `
-  -o data/raw/311_daily_2018_now.json
+  -o data/raw/311/daily_counts_2018_now.json
 ```
 In bash, drop the backticks and use `\$select` instead of `` `$select ``.
 
@@ -70,7 +70,7 @@ https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries&statio
 https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries&stations=USW00094846&startDate=2018-01-01&endDate=2026-10-22&dataTypes=PRCP&units=standard&format=csv
 ```
 ```
-curl.exe -o data/raw/noaa_ohare_2018_now.csv "<the URL above>"
+curl.exe -o data/raw/noaa/ohare_2018_now.csv "<the URL above>"
 ```
 Swap the station ID for Midway.
 
