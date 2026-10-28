@@ -2,9 +2,9 @@
 
 `data/processed/daily.csv` is the hand-off between the data layer (Persons 1 and 2) and everyone who models or checks it (Persons 3, 4, and 6). Code against what is written here.
 
-**How it's made:** `fetch_311.py` and `fetch_noaa.py` download into `data/raw/`, then `build_daily.py` joins them into `daily.csv`, all in `src/data/`. The file is git-ignored. The shared link is in the README.
+**How it's made:** `fetch_311.py` and `fetch_noaa.py` download into `data/raw/`, then `build_daily.py` joins them into `daily.csv`, all in `src/data/`. The file is committed to git, so a pull gets the latest.
 
-**Until the real file exists**, use `data/sample/daily_sample.csv`. It has the same columns but is fake, with different dates and random storms. Never quote results from it.
+`data/sample/daily_sample.csv` has the same columns but is fake, with different dates and random storms. Use it only for quick tests, and never quote results from it.
 
 ## Shape
 

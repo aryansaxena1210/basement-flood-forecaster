@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 ## Layout
-- `data/sample/` synthetic data in the final format (committed). `data/raw`, `data/processed` are git-ignored.
+- `data/sample/` synthetic data in the final format (committed). `data/raw` is git-ignored. `data/processed` and `data/labels` are committed.
 - `src/data`, `src/features`, `src/models` pipeline code
 - `notebooks/<your-folder>/` your own exploration and debugging scripts and their figures, one folder per person (e.g. `p2_311`). Don't put files in someone else's folder.
 - `api/` FastAPI backend, `dashboard/` front end, `reports/` write-up
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ## Workflow
 - Read `docs/TASKS.md` for your row.
 - One branch per person (`p1-weather`, `p2-311`, ...). Open a PR into `main`.
-- Raw/processed data is not committed; scripts in `src/data` must be able to regenerate it. Ofcourse, these mock-data-generation scripts are not added yet, the person working on the data layer should do this on priority to unblock others
+- Raw data is not committed; scripts in `src/data` must be able to regenerate it. `data/processed` (e.g. `daily.csv`) and `data/labels` are committed, so a pull gets them. Ofcourse, these mock-data-generation scripts are not added yet, the person working on the data layer should do this on priority to unblock others
 
 ## Data sources
 Where the training and forecast data comes from, with working example calls: `docs/data_sources.md`.

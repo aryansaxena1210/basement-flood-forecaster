@@ -74,6 +74,6 @@ Everyone in week 4: rehearse the demo twice. Thanksgiving week is buffer, so any
 - Stuck for a day? Say so in the chat. Most blocks here are waiting on a teammate's file.
 - One branch per person (`p1-weather`, `p2-311`, ...). Pull request into `main`. Your buddy reads it first.
 - Python 3.11 or 3.12.
-- Data isn't in git. Scripts in `src/data` must recreate it, and the finished `daily.csv` goes on a shared link written in the README.
+- Raw data isn't in git. Scripts in `src/data` must recreate it. The finished `daily.csv` and the event list in `data/labels` are in git, so a pull gets them.
 - The dashboard is a nice-to-have. If it slips, cut it to one plain chart or drop it. The API and the model are the product.
 - If the NWS forecast has no usable rain amounts when a storm is forecast, use `POST /forecast/what-if` and type in the rainfall.
