@@ -13,7 +13,7 @@ rows = list(csv.DictReader(open("data/processed/daily.csv")))
 days = [date.fromisoformat(r["date"]) for r in rows]
 n = [int(r["complaint_count"]) for r in rows]
 rain = [float(r["prcp_in"]) for r in rows]
-os.makedirs("notebooks/figures", exist_ok=True)
+os.makedirs("notebooks/p2_311/figures", exist_ok=True)
 
 q = statistics.quantiles(n, n=100)
 print(f"median {statistics.median(n)}  mean {statistics.mean(n):.1f}  p90 {q[89]:.0f}  p95 {q[94]:.0f}  p99 {q[98]:.0f}  max {max(n)}")
@@ -48,5 +48,5 @@ ax[1, 1].scatter(rain3, [max(c, 0.8) for c in n], s=6, alpha=0.4, color="tab:pur
 ax[1, 1].set(yscale="log", title="3-day rain total vs complaints", xlabel="rain over 3 days (in)", ylabel="complaints/day")
 
 plt.tight_layout()
-plt.savefig("notebooks/figures/flood_rule_overview.png", dpi=90)
-print("\nsaved notebooks/figures/flood_rule_overview.png")
+plt.savefig("notebooks/p2_311/figures/flood_rule_overview.png", dpi=90)
+print("\nsaved notebooks/p2_311/figures/flood_rule_overview.png")

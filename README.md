@@ -12,6 +12,7 @@ pip install -r requirements.txt
 ## Layout
 - `data/sample/` synthetic data in the final format (committed). `data/raw`, `data/processed` are git-ignored.
 - `src/data`, `src/features`, `src/models` pipeline code
+- `notebooks/<your-folder>/` your own exploration and debugging scripts and their figures, one folder per person (e.g. `p2_311`). Don't put files in someone else's folder.
 - `api/` FastAPI backend, `dashboard/` front end, `reports/` write-up
 - `docs/` data contract, API contract, task board
 
