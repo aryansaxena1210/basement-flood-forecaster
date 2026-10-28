@@ -63,7 +63,7 @@ Everyone in week 4: rehearse the demo twice. Thanksgiving week is buffer, so any
 ## Decisions already made
 
 1. **What we predict:** the daily complaint count (duplicates removed) for tomorrow and the day after. "Extra calls" is predicted count minus a normal day for that time of year.
-2. **Rain inputs:** average of O'Hare and Midway (O'Hare alone when Midway is blank), plus rain over the last 1, 3, 7, and 14 days.
+2. **Rain inputs:** the larger of O'Hare and Midway (whichever has data if the other is blank), plus rain over the last 1, 3, 7, and 14 days.
 3. **How we test:** by year. Train on earlier years, test on the next. Every year from 2019 on has at least one flood-sized spike, so every test year has something to catch. 2019 is training only, and 2018 has about a week of data, so we skip it.
 4. **How we score floods:** did we flag each real flood within a day, how many false alarms per year, and RMSE/MAE. Big and small floods are scored separately, because the huge 2023 and 2025 floods would otherwise swamp the average.
 5. **Forecast vs. real rain:** we train on rain that fell, but the live tool uses forecasts, which are less exact. The report says so, and one test adds forecast-sized errors.
