@@ -1,0 +1,32 @@
+event_id,start_date,end_date,peak_date,peak_count,total_complaints,big,confirmed,notes
+1,2019-04-29,2019-05-01,2019-05-01,175,419,no,yes,Apr 27-May 3 2019 O'Hare recorded 5.08 inches of precipitation; NWS documented regional flooding. https://www.weather.gov/lot/01May2019_Flooding
+2,2019-05-27,2019-05-29,2019-05-27,220,488,no,yes,May 27 2019 O'Hare recorded 1.92 inches of rain; NWS documented flooding across the Chicago area. https://www.weather.gov/lot/2019May27_severe
+3,2019-10-03,2019-10-03,2019-10-03,149,149,no,yes,Oct 2-3 2019 O'Hare recorded 2.24 inches of rain; NWS confirmed flash flooding in Chicago. https://www.weather.gov/lot/03Oct2019_flashflooding
+4,2020-04-29,2020-04-30,2020-04-29,269,389,no,yes,Apr 28-30 2020 heavy rainfall brought 2.30 inches at O'Hare and widespread river flooding. https://www.weather.gov/lot/2020apr2830_HeavyRain
+5,2020-05-14,2020-05-21,2020-05-17,675,2269,yes,yes,May 17 2020 O'Hare recorded 3.11 inches of rain; significant Chicago flooding confirmed by NWS. https://www.weather.gov/lot/17may2020
+6,2020-10-22,2020-10-22,2020-10-22,121,121,no,yes,Oct 22 2020 storms brought 2.53 inches at Midway and flooded Chicago expressways. https://abc7chicago.com/post/chicago-weather-forecast-severe-radar/7238221/
+7,2021-06-26,2021-06-30,2021-06-26,273,703,no,yes,Jun 26 2021 flash flooding reported in Chicago; Chicago 6NNE measured 2.18 inches of rainfall. https://www.weather.gov/lot/2526June2021
+8,2021-10-25,2021-10-25,2021-10-25,106,106,no,yes,Oct 24-25 2021 heavy rain brought 2.61 inches at O'Hare and regional flooding. https://www.weather.gov/lot/2021oct2425
+9,2022-02-17,2022-02-17,2022-02-17,110,110,no,yes,Feb 16-17 2022 heavy rain followed by snow; Midway measured 1.27 inches of rain; storm and flooding concerns documented. https://www.weather.gov/lot/2022feb1617
+10,2022-02-22,2022-02-22,2022-02-22,104,104,no,unsure,Feb 22 2022 thunderstorms with small hail and freezing rain; basement flooding not independently verified. https://www.weather.gov/lot/202122_winterevents
+11,2022-05-03,2022-05-03,2022-05-03,123,123,no,yes,May 3 2022 NWS Storm Data documents heavy-rain flooding and minor street flooding in northern Chicago. https://www.weather.gov/media/lot/stormdata/pdf/May2022.pdf
+12,2022-07-17,2022-07-19,2022-07-18,466,878,no,unsure,July 2022 was wetter than normal in Chicago but flooding during July 17-19 has not been independently verified. https://www.weather.gov/lot/July2022
+13,2022-09-11,2022-09-16,2022-09-11,1038,2515,yes,yes,Sep 11 2022 parts of Chicago received 2 to 5 inches of rain with reported basement flooding. https://www.weather.gov/lot/2022sep11
+14,2022-09-19,2022-09-19,2022-09-19,106,106,no,unsure,Storms were documented on September 18 and 20 but rainfall-driven flooding on September 19 remains unverified. https://www.weather.gov/media/lot/stormdata/pdf/Sept2022.pdf
+15,2023-07-02,2023-07-20,2023-07-05,2004,11790,yes,yes,Jul 2 2023 O'Hare recorded 3.35 inches and Midway 4.68 inches; major Chicago flash flooding confirmed. https://www.weather.gov/lot/2023_07_02_Flooding
+16,2023-07-24,2023-07-27,2023-07-26,265,745,no,unsure,Jul 24-27 2023 flooding not independently verified; check daily rainfall and complaint timing. https://www.weather.gov/lot/July2023
+17,2023-08-14,2023-08-14,2023-08-14,120,120,no,yes,Aug 14 2023 NWS documented heavy rain and flash flooding in Chicago with flooded underpasses and stranded vehicles. https://www.weather.gov/media/lot/stormdata/pdf/Aug2023.pdf
+18,2024-05-07,2024-05-07,2024-05-07,101,101,no,yes,May 7 2024 NWS documented heavy-rain flooding in southern Cook County and on Interstate 57 in Chicago. https://www.weather.gov/lot/2024_05_07_Severe
+19,2025-01-31,2025-01-31,2025-01-31,156,156,no,yes,Jan 31 2025 NWS documented localized flooding in the Chicago metro area caused by heavy rain and frozen ground. https://www.weather.gov/media/lot/stormdata/pdf/Jan2025.pdf
+20,2025-04-02,2025-04-02,2025-04-02,246,246,no,yes,Apr 2 2025 NWS documented heavy-rain flooding in Chicago including Hyde Park and Washington Park. https://www.weather.gov/media/lot/stormdata/pdf/Apr2025.pdf
+21,2025-07-25,2025-08-01,2025-07-26,677,3514,yes,yes,Jul 25 2025 Midway recorded 3.25 inches of rain; NWS documented widespread Chicago basement flooding. https://www.weather.gov/lot/2025_07_24-25SevereFlood
+22,2025-08-04,2025-08-04,2025-08-04,110,110,no,unsure,Aug 4 2025 flooding not independently verified; additional daily rainfall evidence needed. https://www.weather.gov/lot/AugustSummer2025
+23,2025-08-12,2025-08-22,2025-08-17,3653,9730,yes,yes,Aug 17 2025 torrential rainfall caused Chicago flash flooding with documented basement flooding near Midway. https://www.weather.gov/lot/2025_08_16-17SevereFlood
+24,2025-08-25,2025-08-25,2025-08-25,152,152,no,unsure,Aug 25 2025 flooding not independently verified; additional daily rainfall evidence needed.
+25,2025-09-02,2025-09-02,2025-09-02,193,193,no,unsure,Sep 2 2025 flooding not independently verified; additional daily rainfall evidence needed.
+26,2026-01-08,2026-01-09,2026-01-09,300,487,no,yes,Jan 8-9 2026 NWS confirmed Chicago flash flooding and basement flooding; O'Hare recorded 1.92 inches of rain on Jan 8. https://www.weather.gov/lot/2026_01_08-09_RainWind
+27,2026-03-11,2026-03-11,2026-03-11,110,110,no,unsure,Mar 11 2026 O'Hare recorded 0.33 inches of precipitation but flooding on this date was not independently verified. https://weatherspark.com/h/m/146513/2026/3/Historical-Weather-in-March-2026-at-Chicago-O%27Hare-International-Airport-Illinois-United-States
+28,2026-03-15,2026-03-16,2026-03-16,166,271,no,yes,Mar 15-16 2026 NWS documented Chicago metro flooding with 1.83 inches of precipitation at O'Hare. https://www.weather.gov/lot/2026_03_15-16_Multifaceted_Storm
+29,2026-04-15,2026-04-15,2026-04-15,428,428,no,yes,Apr 14-15 2026 NWS documented street and basement flooding across Chicago after intense overnight rainfall. https://www.weather.gov/lot/2026_04_13-15_SevereWeather
+30,2026-07-03,2026-07-04,2026-07-04,170,279,no,yes,Jul 4 2026 NWS confirmed significant flash flooding and basement flooding in Chicago. https://www.weather.gov/lot/2026_07_02-2026_07_04_ActiveWeather
+31,2026-07-27,2026-07-28,2026-07-27,524,750,yes,yes,Jul 27 2026 severe thunderstorms caused Chicago flash flooding; Midway recorded 2.94 inches of rain. https://www.weather.gov/lot/2026_07_27_severe_flood
