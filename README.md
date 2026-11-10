@@ -22,3 +22,6 @@ pip install -r requirements.txt
 
 ## Data sources
 Where the training and forecast data comes from, with working example calls: `docs/data_sources.md`.
+
+## Run the API
+From the repo root: `uvicorn api.main:app --reload`, then open http://127.0.0.1:8000/docs. Details and tests: `api/README.md`. Response shapes: `docs/api_contract.md`.
