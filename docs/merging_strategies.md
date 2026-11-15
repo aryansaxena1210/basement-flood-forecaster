@@ -58,6 +58,35 @@ Purpose:
 Study the relationship between accumulated rainfall and
 complaints during multiday periods.
 
+## Dataset D: Next-Day Forecast View
+
+Output: data/processed/dataset_d_next_day_forecast.csv
+
+Contains 2,789 daily observations, one per prediction date.
+
+Columns:
+- prediction_date, target_date (the next day)
+- rain_yesterday_in, rain_today_in
+- rain_tomorrow_in: Rainfall that actually fell on the target date
+- rain_tomorrow_forecast_in: Simulated forecast for the target date
+- complaints_yesterday
+- complaints_tomorrow: The prediction target
+- is_spike_tomorrow: For scoring only, not a model input
+
+Purpose:
+Match a real next-day forecast, using only what is known on
+the prediction date. complaints_yesterday shows when a flood
+is still going on after the rain stops.
+
+Past forecasts were not saved, so rain_tomorrow_forecast_in
+adds random forecast-style errors to rain_tomorrow_in: amounts
+off by about +/-50%, 15% of light-rain days (under 0.25 in)
+missed, and 10% of dry days given 0.05 to 0.25 in. These
+settings are assumptions, set at the top of the script and a
+fixed seed gives the same values on every run.
+
+Missing rainfall is preserved as blank.
+
 ## Important Limitations
 
 1. C1 and C2 contain overlapping rolling windows,
@@ -72,6 +101,19 @@ complaints during multiday periods.
    that observation would actually be available.
 6. These are experimental datasets. Predictive performance
    has not yet been evaluated.
+7. Old weather forecasts were never saved. rain_tomorrow_in is
+   a perfect forecast, so a model trained and tested on it will
+   do somewhat worse live. rain_tomorrow_forecast_in
+   approximates real forecast error, but its settings are
+   assumptions, and its errors are symmetric (over and under
+   equally likely). Real forecasts often under-predict the
+   biggest storms. The forecast-error test measures the gap.
+8. Dataset D's rain_today_in is the full day's total. At
+   prediction time, part of today is still forecast.
+9. Dataset D leaves out today's complaints, because the count
+   is still incomplete when the forecast is made. If a model
+   uses complaints_yesterday, the live forecast also needs
+   recent 311 counts.
 
 ## Reproducing the Datasets
 
@@ -79,8 +121,9 @@ Run from the project root:
 
 python3 src/data/build_dataset_b.py
 python3 src/data/build_dataset_c.py
+python3 src/data/build_dataset_d.py
 
-Both scripts require data/processed/daily.csv.
+All three scripts require data/processed/daily.csv.
 
 ## Next Steps
 
