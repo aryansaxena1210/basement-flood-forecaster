@@ -63,7 +63,7 @@ Everyone in week 4: rehearse the demo twice. Thanksgiving week is buffer, so any
 ## Decisions already made
 
 1. **What we predict:** the daily complaint count (duplicates removed) for tomorrow and the day after. "Extra calls" is predicted count minus a normal day for that time of year.
-2. **Rain inputs:** average of O'Hare and Midway (O'Hare alone when Midway is blank), plus rain over the last 1, 3, 7, and 14 days.
+2. **Rain inputs:** the larger of O'Hare and Midway (whichever has data if the other is blank), plus rain over the last 1, 3, 7, and 14 days.
 3. **How we test:** by year. Train on earlier years, test on the next. Every year from 2019 on has at least one flood-sized spike, so every test year has something to catch. 2019 is training only, and 2018 has about a week of data, so we skip it.
 4. **How we score floods:** did we flag each real flood within a day, how many false alarms per year, and RMSE/MAE. Big and small floods are scored separately, because the huge 2023 and 2025 floods would otherwise swamp the average.
 5. **Forecast vs. real rain:** we train on rain that fell, but the live tool uses forecasts, which are less exact. The report says so, and one test adds forecast-sized errors.
@@ -74,6 +74,6 @@ Everyone in week 4: rehearse the demo twice. Thanksgiving week is buffer, so any
 - Stuck for a day? Say so in the chat. Most blocks here are waiting on a teammate's file.
 - One branch per person (`p1-weather`, `p2-311`, ...). Pull request into `main`. Your buddy reads it first.
 - Python 3.11 or 3.12.
-- Data isn't in git. Scripts in `src/data` must recreate it, and the finished `daily.csv` goes on a shared link written in the README.
+- Raw data isn't in git. Scripts in `src/data` must recreate it. The finished `daily.csv` and the event list in `data/labels` are in git, so a pull gets them.
 - The dashboard is a nice-to-have. If it slips, cut it to one plain chart or drop it. The API and the model are the product.
 - If the NWS forecast has no usable rain amounts when a storm is forecast, use `POST /forecast/what-if` and type in the rainfall.

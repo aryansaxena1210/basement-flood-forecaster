@@ -76,7 +76,7 @@ Swap the station ID for Midway.
 
 **Good to know**
 - `PRCP` is rain in inches per day (we asked for `units=standard`).
-- 2018-01-01 to 2026-10-20: every day has a row. O'Hare has no blank rain values. Midway has 4 blank days. We use the average of the two, and when Midway is blank we use O'Hare alone.
+- 2018-01-01 to 2026-10-20: every day has a row. O'Hare has no blank rain values. Midway has 4 blank days. We use the larger of the two (a storm can hit one airport and miss the other). When one is blank we use the other.
 - This only gives daily totals. We are not using an hourly rain rate.
 - The most recent day or two may not be posted yet.
 
