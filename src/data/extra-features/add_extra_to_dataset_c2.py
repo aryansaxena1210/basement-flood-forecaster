@@ -14,6 +14,7 @@ EXTRA = [
     "snow_in_sum",
     "snow_depth_in_end",
     "thunderstorm_any",
+    "humidity_pct_avg",
 ]
 
 with open(weather_file, newline="") as f:
@@ -41,8 +42,9 @@ with open(output_file, "w", newline="") as f:
         snow_sum = sum(float(d["snow_in"]) for d in days)
         snow_depth_end = days[2]["snow_depth_in"]
         thunder_any = max(int(d["thunderstorm"]) for d in days)
+        humidity_avg = sum(float(d["humidity_pct"]) for d in days) / 3
 
         writer.writerow(
             [row[c] for c in fieldnames]
-            + [f"{tmax_max:g}", f"{tmin_min:g}", f"{wind_avg:.2f}", f"{snow_sum:.1f}", snow_depth_end, thunder_any]
+            + [f"{tmax_max:g}", f"{tmin_min:g}", f"{wind_avg:.2f}", f"{snow_sum:.1f}", snow_depth_end, thunder_any, f"{humidity_avg:.1f}"]
         )

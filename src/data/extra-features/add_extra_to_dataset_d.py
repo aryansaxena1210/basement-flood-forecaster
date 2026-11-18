@@ -6,7 +6,7 @@ input_file = ROOT / "data" / "processed" / "dataset_d_next_day_forecast.csv"
 weather_file = ROOT / "data" / "processed" / "extra-features" / "extra_weather_daily.csv"
 output_file = ROOT / "data" / "processed" / "extra-features" / "dataset_d_next_day_forecast_with_extra_features.csv"
 
-EXTRA = ["tmax_f", "tmin_f", "wind_mph", "snow_in", "snow_depth_in", "thunderstorm"]
+EXTRA = ["tmax_f", "tmin_f", "wind_mph", "snow_in", "snow_depth_in", "thunderstorm", "humidity_pct"]
 
 with open(weather_file, newline="") as f:
     weather = {row["date"]: row for row in csv.DictReader(f)}
