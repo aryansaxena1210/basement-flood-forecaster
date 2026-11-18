@@ -43,6 +43,7 @@ date,complaint_count,prcp_in,is_spike
 | Rain over the last 1, 3, 7, 14 days, month, day of year | `data/processed/features.csv` (Person 3) |
 | One row per flood event, with `confirmed` and `notes` | `data/labels/flood_events.csv` (Persons 2 and 1) |
 | Forecast rain | `src/data/forecast.py` (Person 1) |
+| Temperature, wind, snow, thunderstorm, humidity | [`extra_features.md`](extra_features.md) (`data/processed/extra-features/`) |
 | Each station's rain on its own, hourly rain | Not used |
 
 ## Checking it

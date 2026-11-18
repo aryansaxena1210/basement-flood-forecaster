@@ -112,6 +112,14 @@ Each entry is a time block (`PT6H` = 6 hours, `P1D` = 1 day) and the **millimete
 - The NWS forecast starts from now, so it can't be used for training. It's only for the live tool.
 - `/gridpoints/LOT/66,77/forecast` gives text forecasts for people to read. We don't use it.
 
+## 4. Extra weather (temperature, wind, snow, thunderstorm, humidity)
+
+Same NOAA daily-summaries call as rain, with `dataTypes=TMAX,TMIN,AWND,SNOW,SNWD,WT03`. Humidity comes from the Iowa Environmental Mesonet, which archives the same O'Hare airport reports. NOAA's hourly dataset stops in Aug 2025.
+```
+https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ORD&data=relh&year1=2019&month1=3&day1=1&year2=2026&month2=11&day2=16&tz=Etc/UTC&format=onlycomma&latlon=no&missing=M&trace=T&direct=no&report_type=3
+```
+Details, columns and scripts: [`extra_features.md`](extra_features.md).
+
 ## Where the downloaded files go
 
 `data/raw/`. That folder is not in git, so every file in it must be recreatable from the calls above. Whoever builds `src/data` should turn these calls into a script.
